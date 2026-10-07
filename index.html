@@ -141,7 +141,7 @@
     background: var(--sky-pale); border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   }
   .hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
-  .hero-logo { width: 100%; max-width: 640px; filter: drop-shadow(0 0 10px rgba(143,241,255,.55)); animation: float 7s ease-in-out infinite; }
+  .hero-logo { width: 100%; height: auto; max-width: 640px; filter: drop-shadow(0 0 10px rgba(143,241,255,.55)); animation: float 7s ease-in-out infinite; }
   @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
   .hero h1 { font-size: clamp(1.6rem, 1.1rem + 1.9vw, 2.6rem); text-shadow: 0 2px 14px rgba(15,42,102,.35); }
   .slogan { list-style: none; padding: 0; margin: 1.2rem 0 1.8rem; display: grid; gap: .55rem; }
@@ -320,7 +320,7 @@
     background: radial-gradient(circle at 35% 30%, var(--sky-1), var(--sky-2) 60%, var(--sky-3));
     display: grid; place-items: center; overflow: hidden; box-shadow: 0 0 0 6px var(--sky-pale), var(--shadow-card);
   }
-  .about-badge img { width: 135%; max-width: none; transform: translate(14%, 6%); }
+  .about-badge img { width: 135%; height: auto; max-width: none; transform: translate(14%, 6%); }
   .about h2 { font-size: clamp(1.4rem, 1.1rem + 1.4vw, 2.2rem); margin-bottom: 1rem; }
   .about p { margin: 0 0 .8rem; color: var(--navy-soft); font-size: 1.08rem; max-width: 62ch; }
   .about p:last-child { margin-bottom: 0; }
