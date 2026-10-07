@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ЧУДОУНИКУМ — клуб детского развития в Химках</title>
+<meta name="description" content="Клуб детского развития ЧУДОУНИКУМ в Химках: логопед, подготовка к школе, английский, робототехника, программирование, вокал, театр, рисование, суперпродлёнка и другие направления для детей от 2 до 15 лет. Пробное занятие 800 ₽.">
+<meta property="og:title" content="ЧУДОУНИКУМ — клуб детского развития в Химках">
+<meta property="og:description" content="Раскрываем таланты, развиваем способности, верим в каждого ребёнка! Пробное занятие — 800 ₽.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/logo.png">
+<meta name="theme-color" content="#2f8bff">
+<link rel="icon" href="img/wordmark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "name": "ЧУДОУНИКУМ",
+  "description": "Клуб детского развития для детей от 2 до 15 лет",
+  "telephone": "+79997143796",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Академика Грушина, 2/10",
+    "addressLocality": "Химки",
+    "addressCountry": "RU"
+  },
+  "sameAs": ["https://t.me/chudounikum", "https://vk.ru/chudounikum"]
+}
+</script>
+
+<style>
+  :root {
+    /* фирменные цвета с логотипа */
+    --sky-1: #5fd8ff;
+    --sky-2: #2f8bff;
+    --sky-3: #1c63e0;
+    --sky-pale: #eaf6ff;
+    --navy: #0f2a66;
+    --navy-soft: #3d5488;
+    --lemon: #eef3a6;
+    --lilac: #d6a8f2;
+    --aqua: #8ff1ff;
+    --pink: #f5a8e6;
+    --white: #ffffff;
+
+    /* яркие акценты с афиши — по одному на направление */
+    --c-teal: #12a6a0;
+    --c-blue: #1f63db;
+    --c-magenta: #e5267b;
+    --c-orange: #f2800f;
+    --c-purple: #8c3fcb;
+    --c-green: #5aa82b;
+    --c-yellow: #ffd23a;
+
+    --radius-s: 14px;
+    --radius-m: 24px;
+    --radius-l: 36px;
+    --shadow-card: 0 10px 30px -12px rgba(15, 42, 102, .28);
+    --shadow-lift: 0 22px 44px -16px rgba(15, 42, 102, .38);
+    --glow: 0 0 6px rgba(255,255,255,.9), 0 0 18px rgba(143,241,255,.85), 0 0 36px rgba(95,216,255,.6);
+
+    --font-display: "Russo One", system-ui, sans-serif;
+    --font-body: "Nunito", system-ui, sans-serif;
+
+    --text-h2: clamp(1.7rem, 1.1rem + 2.4vw, 2.9rem);
+    --space-section: clamp(4rem, 3rem + 4vw, 7rem);
+    --gutter: clamp(16px, 4vw, 48px);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--sky-pale);
+    color: var(--navy);
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .wrap { width: min(1180px, 100%); margin: 0 auto; padding: 0 var(--gutter); }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.12; margin: 0; }
+  h2 { font-size: var(--text-h2); color: var(--navy); }
+
+  /* ---------- кнопки ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55em;
+    font-family: var(--font-body); font-weight: 900; font-size: 1.05rem;
+    text-decoration: none; text-align: center;
+    padding: .95em 1.5em; border-radius: 999px; border: 0;
+    background: var(--c-magenta); color: #fff;
+    box-shadow: 0 8px 0 -2px #a8155a, 0 14px 26px -10px rgba(229,38,123,.7);
+    transition: transform .25s var(--ease), box-shadow .25s var(--ease), filter .2s;
+  }
+  .btn:hover { transform: translateY(-3px); filter: brightness(1.06); }
+  .btn:active { transform: translateY(4px); box-shadow: 0 3px 0 -2px #a8155a, 0 6px 12px -8px rgba(229,38,123,.7); }
+  .btn:focus-visible { outline: 3px solid var(--c-yellow); outline-offset: 3px; }
+  .btn--white { background: #fff; color: var(--sky-3); box-shadow: 0 8px 0 -2px #b9dcff, 0 14px 26px -12px rgba(15,42,102,.5); }
+  .btn--white:active { box-shadow: 0 3px 0 -2px #b9dcff; }
+  .btn--yellow { background: var(--c-yellow); color: var(--navy); box-shadow: 0 8px 0 -2px #d4a700, 0 14px 26px -12px rgba(15,42,102,.5); }
+  .btn--yellow:active { box-shadow: 0 3px 0 -2px #d4a700; }
+
+  /* ---------- шапка ---------- */
+  .top {
+    position: sticky; top: 0; z-index: 20;
+    background: linear-gradient(90deg, var(--sky-3), var(--sky-2) 60%, #43b6ff);
+    box-shadow: 0 6px 24px -10px rgba(15,42,102,.5);
+  }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 70px; }
+  .top-logo img { height: clamp(30px, 2.2rem + .4vw, 40px); width: auto; filter: drop-shadow(0 0 6px rgba(143,241,255,.7)); }
+  .nav { display: flex; gap: 1.5rem; font-weight: 800; color: #fff; }
+  .nav a { text-decoration: none; position: relative; opacity: .92; }
+  .nav a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 3px; border-radius: 3px;
+    background: var(--c-yellow); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease);
+  }
+  .nav a:hover { opacity: 1; }
+  .nav a:hover::after { transform: scaleX(1); }
+  .top .btn { padding: .6em 1.1em; font-size: .95rem; box-shadow: 0 5px 0 -2px #a8155a; }
+  @media (max-width: 960px) { .nav { display: none; } }
+  @media (max-width: 480px) { .top .btn .btn-text { display: none; } }
+
+  /* ---------- первый экран ---------- */
+  .hero {
+    position: relative; overflow: hidden; color: #fff;
+    background:
+      radial-gradient(60% 70% at 70% 45%, rgba(47,139,255,.95), transparent 70%),
+      radial-gradient(80% 90% at 10% 0%, var(--sky-1), transparent 70%),
+      linear-gradient(160deg, #46c3ff 0%, var(--sky-2) 55%, var(--sky-3) 100%);
+    padding: clamp(2.5rem, 2rem + 3vw, 5rem) 0 clamp(5rem, 4rem + 4vw, 8rem);
+  }
+  .hero::after { /* мягкая волна снизу */
+    content: ""; position: absolute; left: -5%; right: -5%; bottom: -1px; height: clamp(40px, 6vw, 90px);
+    background: var(--sky-pale); border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  }
+  .hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
+  .hero-logo { width: 100%; max-width: 640px; filter: drop-shadow(0 0 10px rgba(143,241,255,.55)); animation: float 7s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  .hero h1 { font-size: clamp(1.6rem, 1.1rem + 1.9vw, 2.6rem); text-shadow: 0 2px 14px rgba(15,42,102,.35); }
+  .slogan { list-style: none; padding: 0; margin: 1.2rem 0 1.8rem; display: grid; gap: .55rem; }
+  .slogan li { display: flex; align-items: center; gap: .7rem; font-weight: 800; font-size: clamp(1.05rem, 1rem + .3vw, 1.25rem); }
+  .slogan li::before { content: "✦"; font-size: 1.2em; }
+  .slogan li:nth-child(1)::before { color: var(--lemon); }
+  .slogan li:nth-child(2)::before { color: var(--pink); }
+  .slogan li:nth-child(3)::before { color: var(--aqua); }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .hero-note { margin-top: 1.2rem; font-weight: 800; display: inline-flex; gap: .5em; align-items: center;
+    background: rgba(255,255,255,.16); border: 1.5px solid rgba(255,255,255,.45); padding: .45em 1em; border-radius: 999px; backdrop-filter: blur(4px); }
+
+  /* звёздочки как на логотипе */
+  .sparkles { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+  .sparkles i { position: absolute; font-style: normal; line-height: 1; animation: twinkle 4s ease-in-out infinite; }
+  .sparkles i:nth-child(3n+1) { color: var(--lemon); }
+  .sparkles i:nth-child(3n+2) { color: var(--pink); }
+  .sparkles i:nth-child(3n)   { color: var(--aqua); }
+  @keyframes twinkle { 0%,100% { opacity: .35; transform: scale(.8) rotate(0); } 50% { opacity: 1; transform: scale(1.1) rotate(15deg); } }
+
+  @media (max-width: 880px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .hero-logo { max-width: min(420px, 82vw); margin: 0 auto; }
+  }
+
+  /* ---------- набор ---------- */
+  .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; margin-top: -2.2rem; position: relative; z-index: 3; }
+  .badge {
+    font-family: var(--font-display); color: #fff; font-size: clamp(.95rem, .85rem + .4vw, 1.2rem);
+    padding: .65em 1.2em; border-radius: var(--radius-s); box-shadow: var(--shadow-card);
+  }
+  .badge:nth-child(1) { background: var(--c-magenta); transform: rotate(-2deg); }
+  .badge:nth-child(2) { background: var(--c-yellow); color: var(--navy); transform: rotate(1.5deg); }
+  .badge:nth-child(3) { background: var(--c-purple); transform: rotate(-1deg); }
+
+  /* ---------- секции ---------- */
+  .section { padding: var(--space-section) 0 0; }
+  .section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 2rem; margin-bottom: 2.4rem; }
+  .section-head p { max-width: 44ch; color: var(--navy-soft); margin: 0; font-size: 1.1rem; }
+  .kicker { display: block; font-weight: 900; color: var(--sky-2); letter-spacing: .1em; text-transform: uppercase; font-size: .85rem; margin-bottom: .5rem; }
+
+  /* ---------- возрасты ---------- */
+  .ages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .age {
+    border-radius: var(--radius-l); padding: 1.8rem 1.6rem 1.6rem; color: #fff;
+    box-shadow: var(--shadow-card); position: relative; overflow: hidden;
+  }
+  .age::after { content: "✦"; position: absolute; right: 1rem; top: .4rem; font-size: 3.5rem; opacity: .35; }
+  .age .num { font-family: var(--font-display); font-size: clamp(2.6rem, 2rem + 2vw, 3.6rem); line-height: 1; }
+  .age .num small { font-size: .45em; margin-left: .2em; }
+  .age h3 { font-size: 1.3rem; margin: .6rem 0 .5rem; }
+  .age p { margin: 0; opacity: .95; }
+  .age:nth-child(1) { background: linear-gradient(150deg, #ff5fa2, var(--c-magenta)); }
+  .age:nth-child(2) { background: linear-gradient(150deg, #ffa53d, var(--c-orange)); }
+  .age:nth-child(3) { background: linear-gradient(150deg, #a868f0, var(--c-purple)); }
+  @media (max-width: 780px) { .ages { grid-template-columns: 1fr; } }
+
+  /* ---------- направления ---------- */
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.1rem; }
+  .card {
+    --c: var(--c-blue);
+    background: #fff; border-radius: var(--radius-m); padding: 1.4rem 1.35rem 1.25rem;
+    display: flex; flex-direction: column; gap: .55rem;
+    box-shadow: var(--shadow-card); border-top: 6px solid var(--c);
+    transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+  .card-head { display: flex; align-items: center; gap: .75rem; }
+  .ico {
+    width: 3rem; height: 3rem; flex: none; border-radius: 14px; display: grid; place-items: center; font-size: 1.5rem;
+    background: color-mix(in srgb, var(--c) 14%, white);
+  }
+  .card h3 { font-size: 1.08rem; color: var(--c); min-width: 0; overflow-wrap: break-word; hyphens: auto; }
+  .card p { margin: 0; color: var(--navy-soft); font-size: .98rem; }
+  .card .meta { margin-top: auto; padding-top: .7rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .tag { font-size: .82rem; font-weight: 800; padding: .3em .75em; border-radius: 999px; background: var(--sky-pale); color: var(--navy); }
+  .tag--price { background: var(--c); color: #fff; }
+  .card.has-photo { padding-top: 0; overflow: hidden; }
+  .card-photo {
+    width: calc(100% + 2.7rem); height: auto; max-width: none; margin: 0 -1.35rem .6rem; aspect-ratio: 4 / 3;
+    object-fit: cover; object-position: center 35%;
+    transition: transform .5s var(--ease);
+  }
+  .card.has-photo:hover .card-photo { transform: scale(1.04); }
+  .card.teal { --c: var(--c-teal); }
+
+  /* ---------- жизнь клуба ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .gallery figure { margin: 0; border-radius: var(--radius-m); overflow: hidden; box-shadow: var(--shadow-card); background: #fff; aspect-ratio: 3 / 4; }
+  .gallery figure:nth-child(even) { transform: translateY(1.5rem); }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+  .gallery figure:hover img { transform: scale(1.05); }
+  .gallery-more { margin-top: 3rem; text-align: center; }
+  @media (max-width: 780px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+  }
+  .card.blue { --c: var(--c-blue); }
+  .card.magenta { --c: var(--c-magenta); }
+  .card.orange { --c: var(--c-orange); }
+  .card.purple { --c: var(--c-purple); }
+  .card.green { --c: var(--c-green); }
+
+  /* ---------- пробное ---------- */
+  .trial {
+    margin-top: var(--space-section); position: relative; overflow: hidden; color: #fff;
+    background: linear-gradient(135deg, var(--sky-3), var(--sky-2) 55%, #44c0ff);
+    padding: clamp(3rem, 2rem + 4vw, 5.5rem) 0;
+  }
+  .trial .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.25fr 1fr; gap: 2.5rem; align-items: center; }
+  .trial h2 { color: #fff; text-shadow: var(--glow); }
+  .trial p { font-size: 1.2rem; max-width: 40ch; margin: 1rem 0 0; }
+  .gift {
+    display: flex; align-items: center; gap: .9rem; margin-top: 1.4rem;
+    background: var(--c-purple); padding: .9rem 1.2rem; border-radius: var(--radius-s); max-width: 30rem;
+    font-family: var(--font-display); font-size: clamp(1rem, .9rem + .4vw, 1.2rem); box-shadow: var(--shadow-card);
+  }
+  .gift span:first-child { font-size: 2rem; }
+  .trial .hero-ctas { margin-top: 2rem; }
+  .trial-steps { list-style: none; padding: 0; margin: 0; display: grid; gap: .9rem; counter-reset: s; }
+  .trial-steps li {
+    background: #fff; color: var(--navy); border-radius: var(--radius-s);
+    padding: 1rem 1.2rem; font-weight: 800; box-shadow: var(--shadow-card);
+    display: flex; gap: .9rem; align-items: center;
+  }
+  .trial-steps li::before {
+    counter-increment: s; content: counter(s);
+    font-family: var(--font-display); color: #fff; background: var(--c-magenta);
+    width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center; flex: none;
+  }
+  .trial-steps li:nth-child(2)::before { background: var(--c-orange); }
+  .trial-steps li:nth-child(3)::before { background: var(--c-green); }
+  @media (max-width: 880px) { .trial .wrap { grid-template-columns: 1fr; } }
+
+  /* ---------- расписание ---------- */
+  .sched-wrap { border-radius: var(--radius-m); background: #fff; box-shadow: var(--shadow-card); overflow: hidden; }
+  table.sched { width: 100%; border-collapse: collapse; font-size: .97rem; }
+  .sched th, .sched td { padding: .85rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid #dcecff; }
+  .sched thead th { background: var(--sky-2); color: #fff; font-weight: 900; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
+  .sched tbody tr:nth-child(even) { background: #f6fbff; }
+  .sched tbody tr:hover { background: #fff8d6; }
+  .sched td:first-child { font-weight: 900; }
+  .sched .age-cell { color: var(--navy-soft); white-space: nowrap; }
+  .sched .price-cell { font-weight: 900; color: var(--sky-3); white-space: nowrap; }
+  .sched-note { margin-top: 1.2rem; color: var(--navy-soft); font-size: .95rem; }
+  @media (max-width: 780px) {
+    .sched thead { display: none; }
+    .sched, .sched tbody, .sched tr, .sched td { display: block; width: 100%; }
+    .sched tr { padding: 1rem 1.1rem; border-bottom: 1px solid #dcecff; }
+    .sched td { border: 0; padding: .15rem 0; }
+    .sched td:first-child { font-family: var(--font-display); font-weight: 400; font-size: 1.05rem; margin-bottom: .3rem; color: var(--sky-3); }
+    .sched td[data-label]::before { content: attr(data-label) ": "; font-weight: 900; color: var(--navy); }
+    .sched .age-cell, .sched .price-cell { white-space: normal; }
+  }
+
+  /* ---------- праздники ---------- */
+  .party { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .party-card {
+    border-radius: var(--radius-l); padding: clamp(1.6rem, 1rem + 2vw, 2.6rem); color: #fff;
+    box-shadow: var(--shadow-card); position: relative; overflow: hidden;
+  }
+  .party-card h3 { font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem); margin-bottom: .8rem; }
+  .party-card p { margin: 0 0 1.5rem; font-size: 1.08rem; max-width: 36ch; }
+  .party-card .big { position: absolute; right: 1.1rem; top: .8rem; font-size: clamp(3rem, 2rem + 3vw, 4.6rem); transform: rotate(12deg); }
+  .party-card:nth-child(1) { background: linear-gradient(150deg, #ff5fa2, var(--c-magenta)); }
+  .party-card:nth-child(2) { background: linear-gradient(150deg, #8bd34a, var(--c-green)); }
+  @media (max-width: 780px) { .party { grid-template-columns: 1fr; } }
+
+  /* ---------- о клубе ---------- */
+  .about {
+    display: grid; grid-template-columns: auto 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center;
+    background: #fff; border-radius: var(--radius-l); box-shadow: var(--shadow-card);
+    padding: clamp(1.6rem, 1rem + 3vw, 3.2rem);
+  }
+  .about-badge {
+    width: clamp(130px, 18vw, 200px); aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--sky-1), var(--sky-2) 60%, var(--sky-3));
+    display: grid; place-items: center; overflow: hidden; box-shadow: 0 0 0 6px var(--sky-pale), var(--shadow-card);
+  }
+  .about-badge img { width: 135%; max-width: none; transform: translate(14%, 6%); }
+  .about h2 { font-size: clamp(1.4rem, 1.1rem + 1.4vw, 2.2rem); margin-bottom: 1rem; }
+  .about p { margin: 0 0 .8rem; color: var(--navy-soft); font-size: 1.08rem; max-width: 62ch; }
+  .about p:last-child { margin-bottom: 0; }
+  @media (max-width: 680px) { .about { grid-template-columns: 1fr; } }
+
+  /* ---------- контакты ---------- */
+  .contacts { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.25rem; }
+  .contact-list { display: grid; gap: .9rem; align-content: start; }
+  .contact {
+    display: flex; align-items: center; gap: 1rem; text-decoration: none;
+    background: #fff; border-radius: var(--radius-m); box-shadow: var(--shadow-card);
+    padding: 1rem 1.2rem; transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  a.contact:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+  .contact .ci { width: 3rem; height: 3rem; border-radius: 50%; display: grid; place-items: center; font-size: 1.35rem; flex: none; color: #fff; }
+  .contact small { display: block; color: var(--navy-soft); font-weight: 700; font-size: .85rem; }
+  .contact strong { font-size: 1.1rem; }
+  .map { border-radius: var(--radius-m); overflow: hidden; min-height: 340px; box-shadow: var(--shadow-card); background: #dcecff; }
+  .map iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+  @media (max-width: 880px) { .contacts { grid-template-columns: 1fr; } }
+
+  /* ---------- подвал ---------- */
+  footer { margin-top: var(--space-section); background: linear-gradient(90deg, var(--sky-3), var(--sky-2)); color: #fff; padding: 2.2rem 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: center; font-weight: 700; }
+  footer img { height: 34px; width: auto; }
+  footer a { color: var(--c-yellow); }
+
+  /* ---------- появление при прокрутке ---------- */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+  .reveal.is-in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="top-logo" href="#top"><img src="img/wordmark.png" alt="ЧУДОУНИКУМ" width="750" height="122"></a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="#napravleniya">Направления</a>
+      <a href="#raspisanie">Расписание и цены</a>
+      <a href="#prazdniki">Праздники</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="btn" href="tel:+79997143796">📞 <span class="btn-text">+7 999 714-37-96</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Первый экран -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="sparkles" aria-hidden="true">
+      <i style="left:4%;top:12%;font-size:22px">✦</i>
+      <i style="left:46%;top:8%;font-size:16px;animation-delay:-1s">✦</i>
+      <i style="left:90%;top:14%;font-size:28px;animation-delay:-2s">✦</i>
+      <i style="left:52%;top:72%;font-size:18px;animation-delay:-.5s">✦</i>
+      <i style="left:8%;top:78%;font-size:26px;animation-delay:-3s">✦</i>
+      <i style="left:94%;top:62%;font-size:16px;animation-delay:-1.5s">✦</i>
+      <i style="left:30%;top:4%;font-size:12px;animation-delay:-2.5s">✦</i>
+      <i style="left:70%;top:86%;font-size:14px;animation-delay:-3.5s">✦</i>
+    </div>
+    <div class="wrap">
+      <div>
+        <img class="hero-logo" src="img/logo.png" alt="ЧУДОУНИКУМ — клуб детского развития" width="1058" height="575">
+      </div>
+      <div>
+        <h1 id="hero-title">Клуб детского развития в&nbsp;Химках</h1>
+        <ul class="slogan">
+          <li>Раскрываем таланты</li>
+          <li>Развиваем способности</li>
+          <li>Верим в каждого ребёнка!</li>
+        </ul>
+        <div class="hero-ctas">
+          <a class="btn" href="#probnoe">Записаться на пробное</a>
+          <a class="btn btn--white" href="#napravleniya">Все направления</a>
+        </div>
+        <div class="hero-note">✦ Пробное занятие — 800&nbsp;₽</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="badges">
+      <span class="badge">Открыт набор в группы!</span>
+      <span class="badge">Количество мест ограничено</span>
+      <span class="badge">🎁 Подарок каждому новому ученику</span>
+    </div>
+  </div>
+
+  <!-- Возрасты -->
+  <section class="section" aria-labelledby="ages-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><span class="kicker">Для кого</span><h2 id="ages-title">От малышей до подростков</h2></div>
+        <p>Группы собраны по возрасту, поэтому каждому ребёнку интересно и по силам.</p>
+      </div>
+      <div class="ages">
+        <article class="age reveal">
+          <div class="num">2–4<small>года</small></div>
+          <h3>Малыши</h3>
+          <p>Школа раннего развития «Фантазёры» и логопед: речь, мышление, внимание и воображение.</p>
+        </article>
+        <article class="age reveal">
+          <div class="num">5–6<small>лет</small></div>
+          <h3>Дошкольники</h3>
+          <p>Подготовка к школе, английский, робототехника, вокал и творчество.</p>
+        </article>
+        <article class="age reveal">
+          <div class="num">7–15<small>лет</small></div>
+          <h3>Школьники</h3>
+          <p>Программирование, театр, каллиграфия, английский и суперпродлёнка после уроков.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Направления -->
+  <section class="section" id="napravleniya" aria-labelledby="dir-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><span class="kicker">Направления</span><h2 id="dir-title">Чем мы занимаемся</h2></div>
+        <p>Всё под одной крышей. Направления можно совмещать.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card green has-photo reveal"><img class="card-photo" src="img/photos/logoped.webp" alt="Нейроупражнение на занятии с логопедом в ЧУДОУНИКУМ" loading="lazy" width="670" height="502"><div class="card-head"><span class="ico">💬</span><h3>Логопед</h3></div><p>Развиваем и корректируем речь, помогаем ребёнку говорить правильно и уверенно.</p><div class="meta"><span class="tag">от 2 лет</span><span class="tag tag--price">2 000 ₽ / занятие</span></div></article>
+        <article class="card magenta has-photo reveal"><img class="card-photo" src="img/photos/fantazery.webp" alt="Малыши в школе раннего развития «Фантазёры» в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">⭐</span><h3>Фантазёры 3+</h3></div><p>Школа раннего развития. Играем, творим и развиваем речь, мышление, внимание и воображение.</p><div class="meta"><span class="tag">от 3 лет</span><span class="tag tag--price">12 000 ₽ / 8 зан.</span></div></article>
+        <article class="card orange has-photo reveal"><img class="card-photo" src="img/photos/podgotovka.webp" alt="Группа подготовки к школе в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">📖</span><h3>Подготовка к школе</h3></div><p>Развиваем необходимые навыки и уверенно готовимся к школьному старту.</p><div class="meta"><span class="tag">5–6 лет</span><span class="tag tag--price">7 500 ₽ / 8 зан.</span></div></article>
+        <article class="card purple has-photo reveal"><img class="card-photo" src="img/photos/angliyskiy.webp" alt="Английский в игре в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">🇬🇧</span><h3>Английский язык</h3></div><p>Учимся понимать, говорить и общаться на английском через игру и практику.</p><div class="meta"><span class="tag">от 5 лет</span><span class="tag tag--price">7 500 ₽ / 8 зан.</span></div></article>
+        <article class="card teal has-photo reveal"><img class="card-photo" src="img/photos/robototehnika.webp" alt="Робототехника в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">🤖</span><h3>Робототехника</h3></div><p>Конструируем, программируем и создаём собственных роботов.</p><div class="meta"><span class="tag">от 4,5 лет</span><span class="tag tag--price">4 500 ₽ / 4 зан.</span></div></article>
+        <article class="card blue has-photo reveal"><img class="card-photo" src="img/photos/programmirovanie.webp" alt="Программирование в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">💻</span><h3>Программирование</h3></div><p>Учимся программировать, создавать игры и воплощать собственные цифровые идеи. Две группы: младшая и старшая.</p><div class="meta"><span class="tag">от 6 лет</span><span class="tag tag--price">4 500 ₽ / 4 зан.</span></div></article>
+        <article class="card magenta has-photo reveal"><img class="card-photo" src="img/photos/vokal.webp" alt="Урок вокала в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">🎤</span><h3>Вокал</h3></div><p>Развиваем голос, слух, музыкальность и уверенность в выступлениях.</p><div class="meta"><span class="tag">от 5 лет</span><span class="tag tag--price">2 000 ₽ / занятие</span></div></article>
+        <article class="card orange has-photo reveal"><img class="card-photo" src="img/photos/teatr.webp" alt="Театральное мастерство в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">🎭</span><h3>Театральное мастерство</h3></div><p>Развиваем речь, дикцию, движение, артистичность, импровизацию и уверенность.</p><div class="meta"><span class="tag">от 7 лет</span><span class="tag tag--price">4 500 ₽ / 4 зан.</span></div></article>
+        <article class="card purple has-photo reveal"><img class="card-photo" src="img/photos/risovanie.webp" alt="Рисунки учеников в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">🎨</span><h3>Рисование и лепка</h3></div><p>Осваиваем разные художественные техники, рисуем и создаём объёмные работы.</p><div class="meta"><span class="tag">от 5 лет</span><span class="tag tag--price">4 500 ₽ / 4 зан.</span></div></article>
+        <article class="card green has-photo reveal"><img class="card-photo" src="img/photos/masterskaya.webp" alt="Творческая мастерская в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">✂️</span><h3>Творческая мастерская</h3></div><p>Создаём необычные вещи своими руками из бумаги, гипса и других материалов.</p><div class="meta"><span class="tag">от 5 лет</span><span class="tag tag--price">4 500 ₽ / 4 зан.</span></div></article>
+        <article class="card blue has-photo reveal"><img class="card-photo" src="img/photos/kalligrafiya.webp" alt="Занятие каллиграфией в ЧУДОУНИКУМ" loading="lazy" width="595" height="800"><div class="card-head"><span class="ico">🖋️</span><h3>Каллиграфия</h3></div><p>Тренируем руку, осваиваем красивое письмо и формируем аккуратный почерк.</p><div class="meta"><span class="tag">от 7 лет</span><span class="tag tag--price">2 000 ₽ / занятие</span></div></article>
+        <article class="card blue has-photo reveal"><img class="card-photo" src="img/photos/prodlenka.webp" alt="Суперпродлёнка в ЧУДОУНИКУМ" loading="lazy" width="800" height="600"><div class="card-head"><span class="ico">🎒</span><h3>Суперпродлёнка</h3></div><p>Отдыхаем после школы, делаем домашние задания, развиваемся и интересно проводим время.</p><div class="meta"><span class="tag">Пн–Сб 13:00–18:00</span><span class="tag tag--price">22 000 ₽ / 20 дней</span></div></article>
+        <article class="card magenta has-photo reveal"><img class="card-photo" src="img/photos/individualnye.webp" alt="Индивидуальное занятие в ЧУДОУНИКУМ" loading="lazy" width="600" height="800"><div class="card-head"><span class="ico">👩‍🏫</span><h3>Индивидуальные занятия</h3></div><p>Персональная программа занятий с учётом особенностей и целей ребёнка.</p><div class="meta"><span class="tag">45 минут</span><span class="tag tag--price">2 000 ₽ / занятие</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Пробное занятие -->
+  <section class="trial" id="probnoe" aria-labelledby="trial-title">
+    <div class="sparkles" aria-hidden="true">
+      <i style="left:3%;top:15%;font-size:20px">✦</i>
+      <i style="left:48%;top:10%;font-size:14px;animation-delay:-1s">✦</i>
+      <i style="left:93%;top:20%;font-size:26px;animation-delay:-2s">✦</i>
+      <i style="left:40%;top:85%;font-size:18px;animation-delay:-3s">✦</i>
+      <i style="left:88%;top:82%;font-size:14px;animation-delay:-1.5s">✦</i>
+    </div>
+    <div class="wrap">
+      <div class="reveal">
+        <h2 id="trial-title">Пробное занятие —&nbsp;800&nbsp;₽</h2>
+        <p>Новые знания, яркие эмоции, верные друзья! Приходите познакомиться: ребёнок попробует занятие, а вы увидите педагога и клуб изнутри.</p>
+        <div class="gift"><span>🎁</span><span>Подарок каждому новому ученику!</span></div>
+        <div class="hero-ctas">
+          <a class="btn btn--yellow" href="tel:+79997143796">📞 Позвонить</a>
+          <a class="btn btn--white" href="https://t.me/chudounikum" target="_blank" rel="noopener">✈️ Написать в Telegram</a>
+        </div>
+      </div>
+      <ol class="trial-steps reveal">
+        <li>Позвоните или напишите нам в MAX или Telegram</li>
+        <li>Подберём направление и удобное время</li>
+        <li>Приходите на пробное занятие</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Расписание -->
+  <section class="section" id="raspisanie" aria-labelledby="sched-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><span class="kicker">Расписание</span><h2 id="sched-title">Расписание и цены</h2></div>
+        <p>Оплата по абонементу. Точное время для вашей группы подскажем по телефону.</p>
+      </div>
+      <div class="sched-wrap reveal">
+        <table class="sched">
+          <thead>
+            <tr><th scope="col">Направление</th><th scope="col">Возраст</th><th scope="col">Дни и время</th><th scope="col">Абонемент</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Логопед</td><td class="age-cell" data-label="Возраст">от 2 лет</td><td data-label="Время">Пн 16:00–20:00 · Ср 14:00–20:00 · Пт 16:00–18:00</td><td class="price-cell" data-label="Цена">2 000 ₽ / индивидуальное занятие</td></tr>
+            <tr><td>Школа раннего развития «Фантазёры»</td><td class="age-cell" data-label="Возраст">от 3 лет</td><td data-label="Время">Пн, Чт 10:30–12:00</td><td class="price-cell" data-label="Цена">12 000 ₽ / 8 зан.</td></tr>
+            <tr><td>Подготовка к школе</td><td class="age-cell" data-label="Возраст">5–6 лет</td><td data-label="Время">6 лет: Вт, Чт 18:00–19:30<br>5 лет: Ср 18:30–20:00, Пт 18:00–19:30</td><td class="price-cell" data-label="Цена">7 500 ₽ / 8 зан.</td></tr>
+            <tr><td>Английский язык</td><td class="age-cell" data-label="Возраст">от 5 лет</td><td data-label="Время">Вт, Чт: 16:00–17:00, 17:00–18:00, 18:00–19:45 (по группам)</td><td class="price-cell" data-label="Цена">7 500 ₽ / 8 зан.</td></tr>
+            <tr><td>Робототехника</td><td class="age-cell" data-label="Возраст">от 4,5 лет</td><td data-label="Время">Ср 16:30–18:00 · Сб 13:30–15:00</td><td class="price-cell" data-label="Цена">4 500 ₽ / 4 зан.<br>8 000 ₽ / 8 зан.</td></tr>
+            <tr><td>Программирование</td><td class="age-cell" data-label="Возраст">от 6 лет</td><td data-label="Время">Сб 15:15–16:15 (старшие) · 16:15–17:15 (младшие)</td><td class="price-cell" data-label="Цена">4 500 ₽ / 4 зан.</td></tr>
+            <tr><td>Вокал</td><td class="age-cell" data-label="Возраст">от 5 лет</td><td data-label="Время">Сб 10:00–15:00</td><td class="price-cell" data-label="Цена">2 000 ₽ / занятие</td></tr>
+            <tr><td>Рисование и лепка</td><td class="age-cell" data-label="Возраст">от 5 лет</td><td data-label="Время">Пн 17:00–18:00</td><td class="price-cell" data-label="Цена">4 500 ₽ / 4 зан.</td></tr>
+            <tr><td>Творческая мастерская</td><td class="age-cell" data-label="Возраст">от 5 лет</td><td data-label="Время">Пт 16:00–17:00</td><td class="price-cell" data-label="Цена">4 500 ₽ / 4 зан.</td></tr>
+            <tr><td>Театральное мастерство</td><td class="age-cell" data-label="Возраст">от 7 лет</td><td data-label="Время">Пн 15:00–16:00</td><td class="price-cell" data-label="Цена">4 500 ₽ / 4 зан.</td></tr>
+            <tr><td>Каллиграфия</td><td class="age-cell" data-label="Возраст">от 7 лет</td><td data-label="Время">по договорённости</td><td class="price-cell" data-label="Цена">2 000 ₽ / индивидуальное занятие</td></tr>
+            <tr><td>Индивидуальные занятия</td><td class="age-cell" data-label="Возраст">любой возраст</td><td data-label="Время">по договорённости, 45 минут</td><td class="price-cell" data-label="Цена">2 000 ₽ / занятие</td></tr>
+            <tr><td>Суперпродлёнка</td><td class="age-cell" data-label="Возраст">младшие школьники</td><td data-label="Время">Пн–Сб 13:00–18:00</td><td class="price-cell" data-label="Цена">22 000 ₽ / 20 дней</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sched-note">Пробное занятие по любому направлению — 800 ₽.</p>
+    </div>
+  </section>
+
+  <!-- Праздники -->
+  <section class="section" id="prazdniki" aria-labelledby="party-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><span class="kicker">Праздники</span><h2 id="party-title">Дни рождения и мастер-классы</h2></div>
+      </div>
+      <div class="party">
+        <article class="party-card reveal">
+          <span class="big" aria-hidden="true">🎂</span>
+          <h3>Дни рождения</h3>
+          <p>Устроим весёлый праздник для именинника и друзей. Программу подберём под возраст и интересы ребёнка.</p>
+          <a class="btn btn--white" href="tel:+79997143796">Обсудить праздник</a>
+        </article>
+        <article class="party-card reveal">
+          <span class="big" aria-hidden="true">🎨</span>
+          <h3>Мастер-классы</h3>
+          <p>Тематические творческие мастер-классы для детей. Анонсы публикуем в Telegram и ВКонтакте.</p>
+          <a class="btn btn--white" href="https://t.me/chudounikum" target="_blank" rel="noopener">Следить за анонсами</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Жизнь клуба -->
+  <section class="section" aria-labelledby="life-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><span class="kicker">Жизнь клуба</span><h2 id="life-title">Как проходят занятия</h2></div>
+        <p>Светлые классы, небольшие группы и внимательные педагоги.</p>
+      </div>
+      <div class="gallery reveal">
+        <figure><img src="img/photos/vhod.webp" alt="Вход в клуб ЧУДОУНИКУМ" loading="lazy" width="600" height="800"></figure>
+        <figure><img src="img/photos/urok.webp" alt="Урок в светлом классе" loading="lazy" width="600" height="800"></figure>
+        <figure><img src="img/photos/igra.webp" alt="Игры на перемене" loading="lazy" width="600" height="800"></figure>
+        <figure><img src="img/photos/progulka.webp" alt="Прогулка с педагогом" loading="lazy" width="600" height="800"></figure>
+      </div>
+      <p class="gallery-more reveal"><a class="btn btn--white" href="https://t.me/chudounikum" target="_blank" rel="noopener">Больше фото и видео в Telegram</a></p>
+    </div>
+  </section>
+
+  <!-- О клубе -->
+  <section class="section" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="about reveal">
+        <div class="about-badge" aria-hidden="true"><img src="img/logo.png" alt="" width="1058" height="575"></div>
+        <div>
+          <h2 id="about-title">Почему ЧУДОУНИКУМ</h2>
+          <p>Клуб основала учитель-логопед и дефектолог. Поэтому у нас внимательно относятся к речи, вниманию и развитию каждого ребёнка, на каком бы направлении он ни занимался.</p>
+          <p>Все занятия под одной крышей: пока старший программирует, младший занимается в «Фантазёрах». Родителям удобно, детям интересно.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="section" id="kontakty" aria-labelledby="contacts-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><span class="kicker">Контакты</span><h2 id="contacts-title">Ждём вас в гости</h2></div>
+      </div>
+      <div class="contacts">
+        <div class="contact-list reveal">
+          <a class="contact" href="tel:+79997143796"><span class="ci" style="background:var(--c-magenta)">📞</span><span><small>Запись по телефону</small><strong>+7 999 714-37-96</strong></span></a>
+          <a class="contact" href="https://t.me/chudounikum" target="_blank" rel="noopener"><span class="ci" style="background:var(--sky-2)">✈️</span><span><small>Telegram-канал</small><strong>@chudounikum</strong></span></a>
+          <a class="contact" href="https://vk.ru/chudounikum" target="_blank" rel="noopener"><span class="ci" style="background:var(--c-purple)">💬</span><span><small>ВКонтакте</small><strong>vk.ru/chudounikum</strong></span></a>
+          <div class="contact"><span class="ci" style="background:var(--c-green)">💭</span><span><small>Можно написать нам</small><strong>в MAX или Telegram</strong></span></div>
+          <div class="contact"><span class="ci" style="background:var(--c-orange)">📍</span><span><small>Адрес</small><strong>г. Химки, ул. Академика Грушина, 2/10</strong></span></div>
+        </div>
+        <div class="map reveal">
+          <iframe title="ЧУДОУНИКУМ на карте" loading="lazy"
+            src="https://yandex.ru/map-widget/v1/?text=%D0%A5%D0%B8%D0%BC%D0%BA%D0%B8%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%93%D1%80%D1%83%D1%88%D0%B8%D0%BD%D0%B0%2C%202%2F10&amp;z=16"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top"><img src="img/wordmark.png" alt="ЧУДОУНИКУМ" width="750" height="122"></a>
+    <span>Клуб детского развития · Химки · <a href="tel:+79997143796">+7 999 714-37-96</a></span>
+  </div>
+</footer>
+
+<script>
+  // Плавное появление блоков при прокрутке
+  (function () {
+    var items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('is-in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
